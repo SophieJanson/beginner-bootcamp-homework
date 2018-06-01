@@ -5,14 +5,44 @@ body {
 }
 
 .container {
-  width: 100vw;
+  width: 80vw;
   height: 100vh;
+  margin: auto;
 }
-
+.container h1 {
+  text-align: center;
+  font-size: 3em;
+}
 .image-grid {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.image-grid img {
-  width: 40%;
+
+.grid-item {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #000;
+}
+
+
+#hero-bed {
+  background-image: url(http://elefamily.co/wp-content/uploads/2018/03/superhero-squad-4-piece-toddler-bedding-set-walmart-super-hero-bed-sheets.jpg);
+  background-size: cover;
+}
+
+#hero-weapon {
+  background-image: url(http://www.coldsteel.com/media/catalog/product/cache/1/thumbnail/960x/17f82f742ffe127f42dca9de82fb58b1/8/8/88csh.jpg);
+  background-size: cover;
+}
+
+#hero-backpack {
+  background-image: url(https://c1-zingpopculture.eb-cdn.com.au/merchandising/images/packshots/23df74bd155c4ee3ba08243915e6945b_Large.png);
+  background-size: cover;
+}
+
+#hero-enemy {
+  background-image: url(https://www.sideshowtoy.com/wp-content/uploads/2017/05/dc-comics-batman-arkham-origins-the-joker-statue-prime1-studio-thumb-903037-1.jpg);
+  background-size: cover;
 }
