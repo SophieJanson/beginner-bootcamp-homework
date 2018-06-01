@@ -26,23 +26,33 @@ body {
   border: 1px solid #000;
 }
 
+.grid-item .side-a {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
 
-#hero-bed {
+#hero-bed .side-a{
   background-image: url(http://elefamily.co/wp-content/uploads/2018/03/superhero-squad-4-piece-toddler-bedding-set-walmart-super-hero-bed-sheets.jpg);
-  background-size: cover;
+
 }
 
-#hero-weapon {
+#hero-weapon .side-a{
   background-image: url(http://www.coldsteel.com/media/catalog/product/cache/1/thumbnail/960x/17f82f742ffe127f42dca9de82fb58b1/8/8/88csh.jpg);
-  background-size: cover;
 }
 
-#hero-backpack {
+#hero-backpack .side-a{
   background-image: url(https://c1-zingpopculture.eb-cdn.com.au/merchandising/images/packshots/23df74bd155c4ee3ba08243915e6945b_Large.png);
-  background-size: cover;
 }
 
-#hero-enemy {
+#hero-enemy .side-a{
   background-image: url(https://www.sideshowtoy.com/wp-content/uploads/2017/05/dc-comics-batman-arkham-origins-the-joker-statue-prime1-studio-thumb-903037-1.jpg);
-  background-size: cover;
+}
+
+#hero-enemy .side-a{
+  background-image: url(https://www.sideshowtoy.com/wp-content/uploads/2017/05/dc-comics-batman-arkham-origins-the-joker-statue-prime1-studio-thumb-903037-1.jpg);
+}
+
+#hero-enemy .side-a{
+  background-image: url(https://www.sideshowtoy.com/wp-content/uploads/2017/05/dc-comics-batman-arkham-origins-the-joker-statue-prime1-studio-thumb-903037-1.jpg);
 }
