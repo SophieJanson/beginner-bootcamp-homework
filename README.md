@@ -77,7 +77,7 @@ If you've implemented these instructions you console in the browser should read:
 - `doBattle` is a function that takes two creatures, the first of which is a hero, which deal damage to each other until one of them dies.
     1. `doBattle` should have two parameters `heroicCreature` and `creature`. You can assume that both have the same structure as your `hero` object.
     2. make a guard clause which checks if `heroicCreature` is `heroic`. If `heroicCreature` is not `heroic` return `null` from this function.
-    3. while `heroicCreature` and `creature` have health above zero they take turns dealingDamage to eachother: `heroicCreature` deals damage to `creature` first. If `creature` survives it deals damage to `heroicCreature`.
+    3. while `heroicCreature` and `creature` have health above zero they take turns dealingDamage to each other: `heroicCreature` deals damage to `creature` first. If `creature` survives it deals damage to `heroicCreature`.
     4. at the end of `doBattle` check if `heroicCreature` has health above zero; if so return it from the function. Otherwise give the user feedback about the death of their hero with a popup.
 
 If you've implemented these instructions you console in the browser should read:
