@@ -3,11 +3,11 @@
 const hero = {
   name: "Ruudje",
   heroic: true,
-  inventory: [1, 2],
-  health: 1,
+  inventory: [{type: "weapon1", damage: 1}, {type: "weapon2", damage: 3}],
+  health: 100,
   weapon: {
     type: "girlfriend",
-    damage: 10
+    damage: 11
   }
 };
 
@@ -85,9 +85,11 @@ function flip(imageGridItem) {
 }
 
 function displaySideB(item) {
+  //item = HTML id-attribute of selected image.
   console.log(item);
   let previousStatus;
   let currentStatus;
+
   switch(item) {
     case('hero-bed'):
       previousStatus = hero.health;
@@ -96,14 +98,32 @@ function displaySideB(item) {
       document.getElementById('previous-rest-status').innerHTML = previousStatus;
       document.getElementById('current-rest-status').innerHTML = currentStatus;
       break;
-
     case('hero-weapon'):
-      previousStatus: hero.inventory;
-      currentStatus: pickUpItem(hero, {type: 'sword', damage: 10}).inventory;
-      document.getElementById('previous-rest-status').innerHTML = previousStatus;
-      document.getElementById('current-rest-status').innerHTML = currentStatus;
+      let weapon = {type: 'Sword', damage: 6};
+      pickUpItem(hero, weapon);
+
+      document.getElementById('new-weapon').innerHTML = hero.inventory[hero.inventory.length -1].type;
       break;
+    case('hero-enemy'):
+      let enemy = {health: 15, weapon: {type: "slingshot", damage: 2}};
+      doBattle(hero, enemy);
+      document.getElementById('health-remainder').innerHTML = hero.health;
+      break;
+    case('hero-backpack'):
+      let getIndex = function() {
+        let userInput = window.prompt("Provide a number: ");
+        if(userInput > (hero.inventory.length -1)) {
+          userInput = window.prompt("Provide a smaller number: ");
+        }
+        return userInput;
+      }
+      equipWeapon(hero, getIndex());
+      document.getElementById('new-selected-weapon').innerHTML = hero.weapon.type;
     default:
       break;
-  }
+  };
+};
+
+function displayStats() {
+  let targetElement = document.getElementById('content-stats')
 }
