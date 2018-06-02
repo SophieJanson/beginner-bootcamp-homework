@@ -133,3 +133,10 @@ function runTests(){
 }
 
 runTests()
+
+
+//event listeners
+
+function createImageEventListeners() {
+
+}

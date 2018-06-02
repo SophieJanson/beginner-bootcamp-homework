@@ -1,13 +1,13 @@
 // Variables
 
 const hero = {
-  name: "CommitMan",
+  name: "Ruudje",
   heroic: true,
   inventory: [1, 2],
   health: 1,
   weapon: {
-    type: "git commit",
-    damage: 1
+    type: "girlfriend",
+    damage: 10
   }
 };
 
@@ -76,6 +76,12 @@ function flip(imageGridItem) {
   let classes = imageGridItem.classList;
   classes.contains('flipped') ? classes.remove('flipped') : classes.add('flipped');
   imageGridItem.classList = classes;
+  //todo: user event listener instead of onclick and make sure to call content for backside first.
+}
 
-  //todo: user event listener instead of onclick and make sure to call content for backside first. 
+function displayBedSideB() {
+let previousStatus = hero.health;
+let currentStatus  = rest(hero);
+  console.log(previousStatus);
+  console.log(currentStatus.health);
 }
