@@ -94,6 +94,7 @@ If you've implemented these instructions you console in the browser should read:
 
 - Add a picture of a backpack When it gets clicked by the user the `equipWeapon` function should get called with `hero` as the first argument. The second argument should be `window.prompt()` that asks the user for the index of the weapon they want to equip. Put a console.log in your code to verify that `doBattle` gets called correctly.
 
+
 - Link an external stylesheet and make all the pictures the same size.
 
 - Write `displayStats` function that writes your hero's name, health, weapontype, weapon damage to the page. Call it at the end of your script

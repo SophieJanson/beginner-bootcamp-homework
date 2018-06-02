@@ -74,14 +74,36 @@ function doBattle(heroicCreature, creature) {
 // UI
 function flip(imageGridItem) {
   let classes = imageGridItem.classList;
-  classes.contains('flipped') ? classes.remove('flipped') : classes.add('flipped');
+  if(classes.contains('flipped')) {
+    classes.remove('flipped');
+  } else {
+    displaySideB(imageGridItem.id);
+    classes.add('flipped');
+  }
   imageGridItem.classList = classes;
   //todo: user event listener instead of onclick and make sure to call content for backside first.
 }
 
-function displayBedSideB() {
-let previousStatus = hero.health;
-let currentStatus  = rest(hero);
-  console.log(previousStatus);
-  console.log(currentStatus.health);
+function displaySideB(item) {
+  console.log(item);
+  let previousStatus;
+  let currentStatus;
+  switch(item) {
+    case('hero-bed'):
+      previousStatus = hero.health;
+      currentStatus  = rest(hero).health;
+
+      document.getElementById('previous-rest-status').innerHTML = previousStatus;
+      document.getElementById('current-rest-status').innerHTML = currentStatus;
+      break;
+
+    case('hero-weapon'):
+      previousStatus: hero.inventory;
+      currentStatus: pickUpItem(hero, {type: 'sword', damage: 10}).inventory;
+      document.getElementById('previous-rest-status').innerHTML = previousStatus;
+      document.getElementById('current-rest-status').innerHTML = currentStatus;
+      break;
+    default:
+      break;
+  }
 }
