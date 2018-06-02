@@ -72,3 +72,10 @@ function doBattle(heroicCreature, creature) {
 };
 
 // UI
+function flip(imageGridItem) {
+  let classes = imageGridItem.classList;
+  classes.contains('flipped') ? classes.remove('flipped') : classes.add('flipped');
+  imageGridItem.classList = classes;
+
+  //todo: user event listener instead of onclick and make sure to call content for backside first. 
+}
