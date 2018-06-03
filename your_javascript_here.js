@@ -122,6 +122,11 @@ function displaySideB(item) {
   updateStats();
 };
 
+function removeElementFromDOM(element) {
+  element.remove();
+  console.log("This element has been removed: ", element);
+}
+
 function displayStats() {
   let targetElement = document.getElementById('stats-content');
   let fragmentString = `
