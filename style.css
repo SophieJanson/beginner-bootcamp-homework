@@ -55,20 +55,20 @@ h1, h2 {
 }
 
 #hero-bed .side-a{
-  background-image: url(http://elefamily.co/wp-content/uploads/2018/03/superhero-squad-4-piece-toddler-bedding-set-walmart-super-hero-bed-sheets.jpg);
+  background-image: url(./images/hero-bed.jpg);
 }
 
 #hero-weapon .side-a{
-  background-image: url(http://www.coldsteel.com/media/catalog/product/cache/1/thumbnail/960x/17f82f742ffe127f42dca9de82fb58b1/8/8/88csh.jpg);
+  background-image: url(./images/hero-weapon.jpg);
 }
 
 #hero-backpack .side-a{
-  background-image: url(https://c1-zingpopculture.eb-cdn.com.au/merchandising/images/packshots/23df74bd155c4ee3ba08243915e6945b_Large.png);
+  background-image: url(./images/hero-backpack.png);
   background-color: #fff;
 }
 
 #hero-enemy .side-a{
-  background-image: url(https://www.sideshowtoy.com/wp-content/uploads/2017/05/dc-comics-batman-arkham-origins-the-joker-statue-prime1-studio-thumb-903037-1.jpg);
+  background-image: url(./images/hero-enemy.jpg);
 }
 
 #hero-form .side-a{

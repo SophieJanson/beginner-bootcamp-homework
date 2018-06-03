@@ -112,9 +112,6 @@ function displaySideB(item) {
     case('hero-backpack'):
       let getIndex = function() {
         let userInput = window.prompt("Provide a number: ");
-        if(userInput > (hero.inventory.length -1)) {
-          userInput = window.prompt("Provide a smaller number: ");
-        }
         return userInput;
       }
       equipWeapon(hero, getIndex());
@@ -122,8 +119,30 @@ function displaySideB(item) {
     default:
       break;
   };
+  updateStats();
 };
 
 function displayStats() {
-  let targetElement = document.getElementById('content-stats')
+  let targetElement = document.getElementById('stats-content');
+  let fragmentString = `
+    <p>Name: ${hero.name}</p>
+    <p>Health: ${hero.health}</p>
+    <p>Weapon type: ${hero.weapon.type}</p>
+    <p>Weapon damage: ${hero.weapon.damage}</p>
+  `;
+  targetElement.innerHTML = fragmentString;
+};
+
+function displayInventory() {
+  let targetElement = document.getElementById('stats-inventory');
+  let fragmentString = ``
+  hero.inventory.forEach((item) => {
+    fragmentString += `<p>Type: ${item.type}, Damage: ${item.damage}`;
+  })
+  targetElement.innerHTML = fragmentString;
+}
+
+function updateStats() {
+  displayStats();
+  displayInventory();
 }
