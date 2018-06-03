@@ -1,12 +1,12 @@
 // Variables
 
 const hero = {
-  name: "Ruudje",
+  name: "Spiderman",
   heroic: true,
   inventory: [{type: "weapon1", damage: 1}, {type: "weapon2", damage: 3}],
   health: 100,
   weapon: {
-    type: "girlfriend",
+    type: "gun",
     damage: 11
   }
 };
@@ -52,7 +52,10 @@ function doBattle(heroicCreature, creature) {
 };
 
 // UI
-function flip(imageGridItem) {
+function flip(event, imageGridItem) {
+  if (event.target.id === "new-name") {
+    return;
+  };
   let classes = imageGridItem.classList;
   if(classes.contains('flipped')) {
     classes.remove('flipped');
@@ -66,7 +69,6 @@ function flip(imageGridItem) {
 
 function displaySideB(item) {
   //item = HTML id-attribute of selected image.
-  console.log(item);
   let previousStatus;
   let currentStatus;
   let deleteButton;
@@ -78,6 +80,7 @@ function displaySideB(item) {
 
       document.getElementById('previous-rest-status').innerHTML = previousStatus;
       document.getElementById('current-rest-status').innerHTML = currentStatus;
+      console.log("Your hero is well rested");
       break;
     case('hero-weapon'):
       let weapon = {type: 'Sword', damage: 6};
@@ -117,7 +120,6 @@ function displaySideB(item) {
 };
 
 function removeElementFromDOM(element) {
-  console.log(element);
   element.remove();
   console.log("This element has been removed: ", element);
 }
@@ -146,3 +148,17 @@ function updateStats() {
   displayStats();
   displayInventory();
 }
+
+function updateHeroName() {
+  let newName = document.getElementById('new-name').value;
+  hero.name = newName;
+}
+
+function formSubmitEventListener() {
+  let form = document.getElementById('change-name');
+  form.addEventListener("submit", function (e) {
+    e.stopPropagation();
+    updateHeroName();
+  });
+}
+
